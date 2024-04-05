@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameBehavior : MonoBehaviour
 {
 // 2
 public int MaxItems = 4;
+
     // 3
-  
+
     public Text HealthText;
     public Text ItemText;
     public Text ProgressText;
