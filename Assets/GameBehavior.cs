@@ -15,9 +15,7 @@ public int MaxItems = 4;
     public Text ItemText;
     public Text ProgressText;
   
-    public string HealthText;
-    public string ItemText;
-    public string ProgressText;
+   
     // 4
     void Start()
     {
