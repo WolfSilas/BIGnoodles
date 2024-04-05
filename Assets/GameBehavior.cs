@@ -8,9 +8,9 @@ public class GameBehavior : MonoBehaviour
 public int MaxItems = 4;
     // 3
   
-    public Text HealthText;
-    public Text ItemText;
-    public Text ProgressText;
+    public string HealthText;
+    public string ItemText;
+    public string ProgressText;
     // 4
     void Start()
     {
