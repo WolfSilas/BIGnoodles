@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameBehavior : MonoBehaviour
 {
@@ -7,10 +8,10 @@ public class GameBehavior : MonoBehaviour
     public int MaxItems = 4;
 
     // Text objects to display player health, collected items, and progress
-    
-    public TextMesh HealthText;
-    public TextMesh ItemText;
-    public TextMesh ProgressText;
+
+    public TMPro.TextMeshProUGUI HealthText;
+    public TMPro.TextMeshProUGUI ItemText;
+    public TMPro.TextMeshProUGUI ProgressText;
 
     // Private variables to track collected items and player health
     private int _itemsCollected = 0;
