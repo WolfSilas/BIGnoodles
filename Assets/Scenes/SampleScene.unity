@@ -336,7 +336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fecbecd1f98996f4b9fc939ae4e18f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 600
+  mouseSensitivity: 800
 --- !u!114 &63783130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14079,6 +14079,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 143ab77d1d4a7a24295f68667840ade8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   moveSpeed: 5
 --- !u!114 &1922934480
 MonoBehaviour:
@@ -14125,6 +14126,9 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+=======
+  moveSpeed: 7
+>>>>>>> Stashed changes
 --- !u!1 &1947836942
 GameObject:
   m_ObjectHideFlags: 0
