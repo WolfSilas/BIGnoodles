@@ -25,7 +25,12 @@ public class PauseMenu : MonoBehaviour
 
     public void ResumeGame()
     {
-        TogglePauseMenu(); // Hide the pause menu
+        // Toggle the visibility of the pause menu canvas
+        if (pauseMenuCanvas != null)
+        {
+            pauseMenuCanvas.SetActive(false); // Hide the pause menu canvas
+            Time.timeScale = 1f; // Resume the game by setting time scale to 1
+        }
     }
 
     public void ReturnToMainMenu()

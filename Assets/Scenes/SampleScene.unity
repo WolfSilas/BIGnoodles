@@ -13266,7 +13266,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08ec712f8a043d441ac7906fe1ac55b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prompt: 
+  cursorTexture: {fileID: 0}
+  cursorMode: 0
 --- !u!65 &1656030697
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14861,7 +14862,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c5b3ca82c2c0d341aa12e81fedd3044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenuCanvas: {fileID: 0}
+  pauseMenuCanvas: {fileID: 2111647336}
 --- !u!1 &2121163286
 GameObject:
   m_ObjectHideFlags: 0
