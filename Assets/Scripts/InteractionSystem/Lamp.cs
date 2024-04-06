@@ -1,15 +1,30 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Lamp : MonoBehaviour, IInteractable
+public class InteractableItem : MonoBehaviour
 {
-    [SerializeField] private string _prompt;
+    public Texture2D cursorTexture;
+    public CursorMode cursorMode = CursorMode.Auto;
 
-    public string InteractionPrompt => _prompt;
-    public bool Interact(Interactor interactor)
+    private bool isMouseOver = false;
+
+    void OnMouseEnter()
     {
-        Debug.Log("Logging in to the shopping website!");
-        return true;
+        isMouseOver = true;
+        Cursor.SetCursor(cursorTexture, Vector2.zero, cursorMode);
+    }
+
+    void OnMouseExit()
+    {
+        isMouseOver = false;
+        Cursor.SetCursor(null, Vector2.zero, cursorMode);
+    }
+
+    void OnMouseDown()
+    {
+        if (isMouseOver)
+        {
+            Debug.Log("Interacted with the item!");
+            // Implement interaction logic here
+        }
     }
 }
