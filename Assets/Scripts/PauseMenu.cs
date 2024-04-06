@@ -35,7 +35,15 @@ public class PauseMenu : MonoBehaviour
 
     public void ReturnToMainMenu()
     {
-        SceneManager.LoadScene("MainMenu"); // Replace "MainMenu" with the name of your main menu scene
+        // Hide the pause menu if it's active
+        if (pauseMenuCanvas != null && pauseMenuCanvas.activeSelf)
+        {
+            pauseMenuCanvas.SetActive(false);
+            Time.timeScale = 1f; // Ensure the game resumes if the pause menu was active
+        }
+
+        // Return to the main menu
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void ShowHelp()
