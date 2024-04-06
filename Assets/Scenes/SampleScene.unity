@@ -2158,7 +2158,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 92926539}
-  m_VersionIndex: 4587
+  m_VersionIndex: 4590
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
