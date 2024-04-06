@@ -1,21 +1,9 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenuCanvas;
-    public GameObject helpPanel;
-    public Text helpText;
-
-    void Start()
-    {
-        // Ensure that the help panel is initially hidden
-        if (helpPanel != null)
-        {
-            helpPanel.SetActive(false);
-        }
-    }
 
     void Update()
     {
@@ -35,30 +23,19 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    public void ShowHelp()
+    public void ResumeGame()
     {
-        // Toggle the visibility of the help panel
-        if (helpPanel != null)
-        {
-            helpPanel.SetActive(!helpPanel.activeSelf);
-
-            // Set sample instructions in the help text
-            if (helpText != null)
-            {
-                if (helpPanel.activeSelf)
-                {
-                    helpText.text = "Sample Instructions:\n\n- Use WASD or arrow keys to move.\n- Press Spacebar to jump.\n- Press Escape to open this menu.";
-                }
-                else
-                {
-                    helpText.text = ""; // Clear the help text when hiding the panel
-                }
-            }
-        }
+        TogglePauseMenu(); // Hide the pause menu
     }
 
-    public void QuitToMainMenu()
+    public void ReturnToMainMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("MainMenu"); // Replace "MainMenu" with the name of your main menu scene
+    }
+
+    public void ShowHelp()
+    {
+        // You can display help instructions here or navigate to another scene with detailed instructions
+        Debug.Log("Help: Use WASD to walk."); // Placeholder for displaying help
     }
 }
