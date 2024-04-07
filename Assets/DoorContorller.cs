@@ -1,10 +1,12 @@
 using UnityEngine;
-using System.Collections; // Include the System.Collections namespace for IEnumerator
+using System.Collections;
 
-public class DoorController : MonoBehaviour
+public class DoorController : MonoBehaviour, IInteractable
 {
     public Vector3 openPositionOffset; // Offset by which the door should move when open
     public float smoothTime = 0.5f; // Smoothness of door opening animation
+    [SerializeField] private string _prompt;
+    public string InteractionPrompt => _prompt;
 
     private bool isOpen = false; // Flag to check if the door is open or closed
     private Vector3 startPosition;
@@ -26,15 +28,28 @@ public class DoorController : MonoBehaviour
         // Check if the player presses the "E" key
         if (Input.GetKeyDown(KeyCode.E))
         {
-            // Toggle the state of the door
-            isOpen = !isOpen;
-            // Calculate the target position based on whether the door is open or closed
-            targetPosition = isOpen ? startPosition + openPositionOffset : startPosition;
-            // Calculate the target rotation based on whether the door is open or closed
-            targetRotation = isOpen ? Quaternion.Euler(0, 270, 0) * startRotation : startRotation;
+            ToggleDoor();
+        }
+    }
 
-            // Start the coroutine to smoothly move and rotate the door
-            StartCoroutine(MoveDoor());
+    public void ToggleDoor()
+    {
+        isOpen = !isOpen;
+        // Calculate the target position based on whether the door is open or closed
+        targetPosition = isOpen ? startPosition + openPositionOffset : startPosition;
+        // Calculate the target rotation based on whether the door is open or closed
+        targetRotation = isOpen ? Quaternion.Euler(0, 270, 0) * startRotation : startRotation;
+
+        // Start the coroutine to smoothly move and rotate the door
+        StartCoroutine(MoveDoor());
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        // Check if the object entering the trigger is the player
+        if (other.CompareTag("Player"))
+        {
+            ToggleDoor();
         }
     }
 
@@ -58,5 +73,12 @@ public class DoorController : MonoBehaviour
         // Ensure the door reaches its final position and rotation
         transform.position = targetPosition;
         transform.rotation = targetRotation;
+    }
+
+    public bool Interact(Interactor interactor)
+    {
+        // Open or close the door when interacted with
+        ToggleDoor();
+        return true; // Interaction successful
     }
 }
