@@ -9,7 +9,7 @@ public class Laptop : MonoBehaviour, IInteractable
     public string InteractionPrompt => _prompt;
     public bool Interact(Interactor interactor)
     {
-        Debug.Log("Logging in to the shopping website!")
+        Debug.Log("Logging in to the shopping website!");
         return true;
     }
 
