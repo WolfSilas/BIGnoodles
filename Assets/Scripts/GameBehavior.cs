@@ -20,8 +20,8 @@ public class GameBehavior : MonoBehaviour
     void Start()
     {
         // Initialize UI text with starting values
-        ItemText.text = "Items Collected: " + _itemsCollected;
-        HealthText.text = "Player Health: " + _playerHP;
+        ItemText.text = "Sustainability: " + _itemsCollected;
+        HealthText.text = "Energy Efficiency Points: " + _playerHP;
     }
 
     // Property to get and set the number of collected items

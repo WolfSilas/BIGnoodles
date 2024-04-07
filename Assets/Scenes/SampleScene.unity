@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2621,8 +2621,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 359, y: 162.4}
-  m_SizeDelta: {x: -678, y: -334}
+  m_AnchoredPosition: {x: 486.87, y: 230.53}
+  m_SizeDelta: {x: -973.735, y: -461.0507}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &200521716
 CanvasRenderer:
@@ -6017,7 +6017,7 @@ GameObject:
   - component: {fileID: 896229740}
   - component: {fileID: 896229743}
   m_Layer: 5
-  m_Name: Items
+  m_Name: Sustainability
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6039,8 +6039,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 162.20001}
-  m_SizeDelta: {x: -678, y: -334}
+  m_AnchoredPosition: {x: 92, y: 256.56}
+  m_SizeDelta: {x: -770.8039, y: -523.12}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &896229740
 MeshRenderer:
@@ -6128,7 +6128,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Items
+  m_text: Sustainability
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6856,7 +6856,7 @@ GameObject:
   - component: {fileID: 1016805075}
   - component: {fileID: 1016805077}
   m_Layer: 5
-  m_Name: Health
+  m_Name: EnergyEfficiencyPoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6878,8 +6878,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -289.47, y: 162}
-  m_SizeDelta: {x: -578.9387, y: -334}
+  m_AnchoredPosition: {x: -314.62985, y: 259.06003}
+  m_SizeDelta: {x: -629.27, y: -528.12}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1016805073
 CanvasRenderer:
@@ -6967,7 +6967,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Health
+  m_text: Energy Efficient Points
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
