@@ -7014,7 +7014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 1006519176}
-  openPositionOffset: {x: 1.46, y: 0, z: 5}
+  openPositionOffset: {x: 0, y: 0, z: 5}
   openRotationOffset: {x: 0, y: 0, z: 0}
   openSpeed: 2
 --- !u!65 &1006519183
