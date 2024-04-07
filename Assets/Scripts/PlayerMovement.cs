@@ -3,9 +3,15 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 5f; // Adjust this value to change the speed of the character
+    private bool isMovementEnabled = true;
 
     void Update()
     {
+        if (!isMovementEnabled)
+        {
+            return;
+        }
+
         // Get input from the player
         float horizontalInput = Input.GetAxisRaw("Horizontal");
         float verticalInput = Input.GetAxisRaw("Vertical");
@@ -15,5 +21,17 @@ public class PlayerController : MonoBehaviour
 
         // Move the character
         transform.Translate(moveDirection * moveSpeed * Time.deltaTime);
+    }
+
+    // Method to disable player movement
+    public void DisableMovement()
+    {
+        isMovementEnabled = false;
+    }
+
+    // Method to enable player movement
+    public void EnableMovement()
+    {
+        isMovementEnabled = true;
     }
 }
