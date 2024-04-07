@@ -5211,7 +5211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbccf25445efdb348865c7d6e2749683, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openPositionOffset: {x: 50, y: 0, z: 0}
+  openPositionOffset: {x: 2.1, y: 0, z: -1.17}
   smoothTime: 0.5
 --- !u!1 &601763567
 GameObject:
