@@ -5196,13 +5196,13 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.16386719, y: 0.9763051, z: 2.1892018}
   m_Center: {x: -0.1903005, y: 0.087499335, z: 1.1002762}
---- !u!114 &588696481
+--- !u!114 &588696485
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5211,12 +5211,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 588696477}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbccf25445efdb348865c7d6e2749683, type: 3}
+  m_Script: {fileID: 11500000, guid: ca7ad38eb7060d44ea6eac3f3846be0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  door: {fileID: 588696477}
   openPositionOffset: {x: 2.1, y: 0, z: -1.17}
-  smoothTime: 0.5
-  _prompt: 
+  openRotationOffset: {x: 0, y: 0, z: 270}
+  openSpeed: 2
+--- !u!65 &588696486
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588696477}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.16386719, y: 0.9763051, z: 2.1892018}
+  m_Center: {x: -0.1903005, y: 0.087499335, z: 1.1002762}
 --- !u!1 &601763567
 GameObject:
   m_ObjectHideFlags: 0
@@ -6922,6 +6944,11 @@ MonoBehaviour:
   openPositionOffset: {x: 1.46, y: 0, z: 2.88}
   smoothTime: 0.5
   _prompt: 
+  isOpen: 0
+  startPosition: {x: 0, y: 0, z: 0}
+  targetPosition: {x: 0, y: 0, z: 0}
+  startRotation: {x: 0, y: 0, z: 0, w: 0}
+  targetRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!65 &1006519179
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10101,6 +10128,11 @@ MonoBehaviour:
   openPositionOffset: {x: 0.76, y: 0, z: 2.23}
   smoothTime: 0.5
   _prompt: 
+  isOpen: 0
+  startPosition: {x: 0, y: 0, z: 0}
+  targetPosition: {x: 0, y: 0, z: 0}
+  startRotation: {x: 0, y: 0, z: 0, w: 0}
+  targetRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!65 &1308825228
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13751,7 +13783,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a4b59138aea18cc4d8b303c6c04f1fc9, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19966,7 +19998,7 @@ GameObject:
   - component: {fileID: 1922934482}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20298,6 +20330,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 22e78f5c1fe782a47ad7f20488b6b5dc, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: -5477749408508380018, guid: 22e78f5c1fe782a47ad7f20488b6b5dc, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -20338,6 +20374,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: -4683669308469848369, guid: 22e78f5c1fe782a47ad7f20488b6b5dc, type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 22e78f5c1fe782a47ad7f20488b6b5dc, type: 3}
       propertyPath: m_Name
       value: Door
@@ -20359,7 +20399,10 @@ PrefabInstance:
       addedObject: {fileID: 588696479}
     - targetCorrespondingSourceObject: {fileID: -8391222552659086748, guid: 22e78f5c1fe782a47ad7f20488b6b5dc, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 588696481}
+      addedObject: {fileID: 588696485}
+    - targetCorrespondingSourceObject: {fileID: -8391222552659086748, guid: 22e78f5c1fe782a47ad7f20488b6b5dc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 588696486}
   m_SourcePrefab: {fileID: 100100000, guid: 22e78f5c1fe782a47ad7f20488b6b5dc, type: 3}
 --- !u!1 &1980275627
 GameObject:
