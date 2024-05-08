@@ -12,10 +12,11 @@ public class GameBehavior : MonoBehaviour
     public TMPro.TextMeshProUGUI HealthText;
     public TMPro.TextMeshProUGUI ItemText;
     public TMPro.TextMeshProUGUI ProgressText;
+    public TMPro.TextMeshProUGUI sustainableValue;
 
     // Private variables to track collected items and player health
-    private int _itemsCollected = 0;
-    private int _playerHP = 10;
+    public int _itemsCollected = 50;
+    public int _playerHP = 80;
 
     void Start()
     {
@@ -32,6 +33,7 @@ public class GameBehavior : MonoBehaviour
         {
             // Update collected items count
             _itemsCollected = value;
+            sustainableValue.text = value.ToString();
             ItemText.text = "Items Collected: " + Items;
 
             // Check if all items have been collected
