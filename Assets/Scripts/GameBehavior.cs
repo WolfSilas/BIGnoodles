@@ -57,7 +57,7 @@ public class GameBehavior : MonoBehaviour
         {
             // Update player health
             _playerHP = value;
-            HealthText.text = "Player Health: " + HP;
+            HealthText.text = "Sustainability: " + HP;
             Debug.LogFormat("Lives: {0}", _playerHP);
 
             // Check for losing condition (if health reaches zero or below)

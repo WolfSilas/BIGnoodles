@@ -2985,8 +2985,8 @@ MonoBehaviour:
   ItemText: {fileID: 896229743}
   ProgressText: {fileID: 200521720}
   sustainableValue: {fileID: 0}
-  _itemsCollected: 0
-  _playerHP: 10
+  _itemsCollected: 50
+  _playerHP: 80
 --- !u!23 &200521719
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5955,6 +5955,7 @@ GameObject:
   - component: {fileID: 535876199}
   - component: {fileID: 535876198}
   - component: {fileID: 535876197}
+  - component: {fileID: 535876200}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -6076,6 +6077,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 535876195}
   m_CullTransparentMesh: 1
+--- !u!114 &535876200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535876195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6773dbf478fb8440b4af37caebed14b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sustainabilityBar: {fileID: 2009460995}
 --- !u!1 &551934555
 GameObject:
   m_ObjectHideFlags: 0
@@ -7390,6 +7404,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &896229747 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6746959226663468156, guid: e86cc073a6ea6b547ae6a582411be6d6, type: 3}
+  m_PrefabInstance: {fileID: 4842661819427663366}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b796904aab33b704ca48d8f549e95726, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &906649219
 GameObject:
   m_ObjectHideFlags: 0
@@ -8450,8 +8475,8 @@ MonoBehaviour:
   ItemText: {fileID: 896229743}
   ProgressText: {fileID: 200521720}
   sustainableValue: {fileID: 0}
-  _itemsCollected: 0
-  _playerHP: 10
+  _itemsCollected: 50
+  _playerHP: 80
 --- !u!114 &1016805077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15223,7 +15248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7ed92182c123de40a295ba585ce18af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Daytwo: 
+  sceneName: Day2
 --- !u!4 &1542521270
 Transform:
   m_ObjectHideFlags: 0
@@ -22914,6 +22939,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   originalMaterial: {fileID: -876546973899608171, guid: 7b4878f0f718c6a40bf53bdc107d0c0c, type: 3}
   changedMaterial: {fileID: 2100000, guid: a4b59138aea18cc4d8b303c6c04f1fc9, type: 2}
+--- !u!114 &2009460993 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1450603813006890458, guid: e86cc073a6ea6b547ae6a582411be6d6, type: 3}
+  m_PrefabInstance: {fileID: 4842661819427663366}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2009460995 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8325504120627188961, guid: e86cc073a6ea6b547ae6a582411be6d6, type: 3}
+  m_PrefabInstance: {fileID: 4842661819427663366}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36942d1628f329a4da3685e8dea712fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2111647336
 GameObject:
   m_ObjectHideFlags: 0
@@ -23225,7 +23272,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6746959226663468156, guid: e86cc073a6ea6b547ae6a582411be6d6, type: 3}
       propertyPath: _playerHP
-      value: 5
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 6746959226663468156, guid: e86cc073a6ea6b547ae6a582411be6d6, type: 3}
       propertyPath: HealthText
@@ -23235,9 +23282,33 @@ PrefabInstance:
       propertyPath: ProgressText
       value: 
       objectReference: {fileID: 200521720}
+    - target: {fileID: 6746959226663468156, guid: e86cc073a6ea6b547ae6a582411be6d6, type: 3}
+      propertyPath: _itemsCollected
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6746959226663468156, guid: e86cc073a6ea6b547ae6a582411be6d6, type: 3}
+      propertyPath: sustainableValue
+      value: 
+      objectReference: {fileID: 896229743}
     - target: {fileID: 8321197180883358073, guid: e86cc073a6ea6b547ae6a582411be6d6, type: 3}
       propertyPath: m_Name
       value: Sustainability UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 8325504120627188961, guid: e86cc073a6ea6b547ae6a582411be6d6, type: 3}
+      propertyPath: gameBehavior
+      value: 
+      objectReference: {fileID: 896229747}
+    - target: {fileID: 8325504120627188961, guid: e86cc073a6ea6b547ae6a582411be6d6, type: 3}
+      propertyPath: sustainabilityBar
+      value: 
+      objectReference: {fileID: 2009460993}
+    - target: {fileID: 8325504120627188961, guid: e86cc073a6ea6b547ae6a582411be6d6, type: 3}
+      propertyPath: currencyIncreaseAmount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8325504120627188961, guid: e86cc073a6ea6b547ae6a582411be6d6, type: 3}
+      propertyPath: playerHPIncreaseAmount
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9214922958869876607, guid: e86cc073a6ea6b547ae6a582411be6d6, type: 3}
       propertyPath: m_Pivot.x
