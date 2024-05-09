@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Daytwo.unity
+    guid: 3ec1d7e630a07a5448c77e94b5ca333e
+  - enabled: 1
+    path: Assets/Scenes/DayTransition.unity
+    guid: 8f12b77bb57b99444b9d06de18269f3b
   m_configObjects: {}

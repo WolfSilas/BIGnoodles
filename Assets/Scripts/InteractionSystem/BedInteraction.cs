@@ -19,7 +19,7 @@ public class BedInteraction : MonoBehaviour, IInteractable
 
     private bool isImageVisible = false;
 
-    
+    public SceneLoader sceneLoader;
 
     private void Start()
     {
@@ -51,6 +51,15 @@ public class BedInteraction : MonoBehaviour, IInteractable
     public PlayableDirector transitionTimeline;
     public void SetImageVisibility(bool isVisible)
     {
+        if (sceneLoader != null)
+        {
+            // Call LoadScene method from SceneLoader
+            sceneLoader.LoadScene();
+        }
+        else
+        {
+            Debug.LogError("SceneLoader script is not attached!");
+        }
         imageComponent.enabled = isVisible;
         if (transitionTimeline != null)
         {
