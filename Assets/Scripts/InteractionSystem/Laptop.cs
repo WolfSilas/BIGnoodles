@@ -25,7 +25,7 @@ public class Letter: MonoBehaviour, IInteractable
 
     public bool Interact(Interactor interactor)
     {
-        Debug.Log("Logging in to the shopping website!");
+        Debug.Log("Letter opened!");
 
         // Toggle the visibility of the Image component
         isImageVisible = !isImageVisible;
