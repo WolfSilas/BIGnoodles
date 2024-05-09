@@ -8383,7 +8383,7 @@ GameObject:
   - component: {fileID: 1016805075}
   - component: {fileID: 1016805077}
   m_Layer: 5
-  m_Name: EnergyEfficiencyPoints
+  m_Name: Sustainability
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8497,7 +8497,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Energy Efficient Points
+  m_text: Sustainability
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -23256,19 +23256,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3103246588975977579, guid: e86cc073a6ea6b547ae6a582411be6d6, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -363.3
       objectReference: {fileID: 0}
     - target: {fileID: 3103246588975977579, guid: e86cc073a6ea6b547ae6a582411be6d6, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -3.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4029934893802940890, guid: e86cc073a6ea6b547ae6a582411be6d6, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 46.6638
+      objectReference: {fileID: 0}
+    - target: {fileID: 4029934893802940890, guid: e86cc073a6ea6b547ae6a582411be6d6, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -2.2105
       objectReference: {fileID: 0}
     - target: {fileID: 4029934893802940890, guid: e86cc073a6ea6b547ae6a582411be6d6, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 68
+      value: 371.59943
       objectReference: {fileID: 0}
     - target: {fileID: 4029934893802940890, guid: e86cc073a6ea6b547ae6a582411be6d6, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -6.7733
+      value: -288.89197
+      objectReference: {fileID: 0}
+    - target: {fileID: 4663307716712322015, guid: e86cc073a6ea6b547ae6a582411be6d6, type: 3}
+      propertyPath: m_text
+      value: placholder
       objectReference: {fileID: 0}
     - target: {fileID: 6746959226663468156, guid: e86cc073a6ea6b547ae6a582411be6d6, type: 3}
       propertyPath: _playerHP
