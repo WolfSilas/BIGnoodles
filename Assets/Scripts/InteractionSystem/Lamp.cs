@@ -41,9 +41,3 @@ public class InteractableItem : MonoBehaviour
     }
 }
 
-//dick
-//several dicks suck
-
-//dicks dicks dicks
-// dicks sucking competition
-// hope that helps @Menna
