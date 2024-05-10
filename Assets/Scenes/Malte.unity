@@ -200,7 +200,7 @@ MonoBehaviour:
   walkSpeed: 6
   runSpeed: 12
   crouchSpeed: 3
-  jumpPower: 7
+  jumpPower: 5
   gravity: 10
   lookSpeed: 2
   lookXLimit: 45
