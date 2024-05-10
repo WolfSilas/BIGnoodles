@@ -2919,7 +2919,7 @@ MonoBehaviour:
   _prompt: 
   imageComponent: {fileID: 0}
   spriteToDisplay: {fileID: 0}
-  sceneLoader: {fileID: 0}
+  sceneLoader: {fileID: 1542521269}
   transitionTimeline: {fileID: 0}
 --- !u!1 &200521713
 GameObject:
@@ -15248,7 +15248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7ed92182c123de40a295ba585ce18af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Day2
+  sceneName: Day3
 --- !u!4 &1542521270
 Transform:
   m_ObjectHideFlags: 0
