@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
@@ -37,13 +34,16 @@ public class PlayerMove : MonoBehaviour
         // Get reference to CharacterController component
         characterController = GetComponent<CharacterController>();
 
-        // Lock cursor and hide it
+        // Lock cursor and show it
         Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = true;
+        Cursor.visible = true; // Set to true to always show the cursor
     }
 
     void Update()
     {
+        // Make sure cursor is always visible
+        Cursor.visible = true;
+
         // Get the direction of movement based on player's input
         Vector3 forward = transform.TransformDirection(Vector3.forward);
         Vector3 right = transform.TransformDirection(Vector3.right);
