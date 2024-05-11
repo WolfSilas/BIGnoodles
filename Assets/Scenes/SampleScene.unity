@@ -23310,7 +23310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   originalMaterial: {fileID: -876546973899608171, guid: 7b4878f0f718c6a40bf53bdc107d0c0c, type: 3}
-  changedMaterial: {fileID: 2100000, guid: a4b59138aea18cc4d8b303c6c04f1fc9, type: 2}
+  changedMaterial: {fileID: 2100000, guid: b15ace51be7b88f45933c3c7c1806a90, type: 2}
 --- !u!1001 &2016338940
 PrefabInstance:
   m_ObjectHideFlags: 0
