@@ -20,6 +20,10 @@ public class PauseMenu : MonoBehaviour
             bool isPaused = !pauseMenuCanvas.activeSelf;
             pauseMenuCanvas.SetActive(isPaused);
             Time.timeScale = isPaused ? 0f : 1f; // Pause or resume the game accordingly
+
+            // Lock or unlock the cursor based on pause state
+            Cursor.lockState = isPaused ? CursorLockMode.None : CursorLockMode.Locked;
+            Cursor.visible = isPaused; // Show or hide the cursor based on pause state
         }
     }
 
@@ -30,6 +34,10 @@ public class PauseMenu : MonoBehaviour
         {
             pauseMenuCanvas.SetActive(false); // Hide the pause menu canvas
             Time.timeScale = 1f; // Resume the game by setting time scale to 1
+
+            // Lock the cursor again when the game resumes
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false; // Hide the cursor again
         }
     }
 
@@ -40,6 +48,8 @@ public class PauseMenu : MonoBehaviour
         {
             pauseMenuCanvas.SetActive(false);
             Time.timeScale = 1f; // Ensure the game resumes if the pause menu was active
+
+           
         }
 
         // Return to the main menu
