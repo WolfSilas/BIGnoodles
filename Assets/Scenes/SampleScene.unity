@@ -6023,7 +6023,7 @@ GameObject:
   - component: {fileID: 535876198}
   - component: {fileID: 535876197}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Sus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11555,7 +11555,7 @@ GameObject:
   - component: {fileID: 1301398753}
   - component: {fileID: 1301398752}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: +5 SuS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18768,6 +18768,7 @@ MonoBehaviour:
   cursorMode: 0
   hoverMaterial: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
   targetObject: {fileID: 1994755618}
+  interactionDistance: 3
 --- !u!1 &1660438091
 GameObject:
   m_ObjectHideFlags: 0
