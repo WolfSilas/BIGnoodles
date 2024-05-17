@@ -76,7 +76,7 @@ public class InteractableItem : MonoBehaviour
     {
         if (isMouseOver && isPlayerNear)
         {
-            Debug.Log("Turned on the Lamp!");
+            Debug.Log("Turned on/off the Lamp!");
             targetObject.ToggleMaterial();
         }
     }
