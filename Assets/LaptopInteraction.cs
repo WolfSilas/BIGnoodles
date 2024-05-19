@@ -96,5 +96,6 @@ public class LaptopInteraction : MonoBehaviour
         isPlacingObject = false;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        isShopMenuActive = false; // Ensure the flag is reset when done placing
     }
 }

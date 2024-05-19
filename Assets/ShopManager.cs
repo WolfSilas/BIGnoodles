@@ -1,6 +1,5 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.Playables;
 
 public class ShopManager : MonoBehaviour
 {
@@ -37,6 +36,7 @@ public class ShopManager : MonoBehaviour
 
             // Toggle off the shop canvas
             shopCanvas.SetActive(false);
+            LaptopInteraction.isShopMenuActive = false; // Ensure the flag is reset
 
             // Lock the cursor
             Cursor.lockState = CursorLockMode.Locked;
@@ -79,10 +79,10 @@ public class ShopManager : MonoBehaviour
 
             // Call EndPlacingObject() to indicate that the player has finished placing the object
             laptopInteraction.EndPlacingObject();
-        }
 
-        // Lock the cursor even after placing the furniture
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+            // Ensure the cursor remains locked after placing the furniture
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
     }
 }
