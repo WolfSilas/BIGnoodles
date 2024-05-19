@@ -1,5 +1,4 @@
 using UnityEngine;
-using TMPro;
 
 public class LaptopInteraction : MonoBehaviour
 {
@@ -11,6 +10,9 @@ public class LaptopInteraction : MonoBehaviour
 
     // Assign the desired spawn point vector
     public Vector3 spawnPointPosition = new Vector3(-52, 35, 120);
+
+    // Static flag to check if the shop menu is active
+    public static bool isShopMenuActive = false;
 
     void Start()
     {
@@ -60,6 +62,8 @@ public class LaptopInteraction : MonoBehaviour
     void ToggleShopCanvas()
     {
         shopCanvas.SetActive(!shopCanvas.activeSelf);
+        isShopMenuActive = shopCanvas.activeSelf; // Update the static flag
+
         if (!shopCanvas.activeSelf && !isPlacingObject)
         {
             Cursor.lockState = CursorLockMode.Locked;

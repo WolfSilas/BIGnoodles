@@ -7,7 +7,7 @@ public class PauseMenu : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !LaptopInteraction.isShopMenuActive)
         {
             TogglePauseMenu();
         }
@@ -48,8 +48,6 @@ public class PauseMenu : MonoBehaviour
         {
             pauseMenuCanvas.SetActive(false);
             Time.timeScale = 1f; // Ensure the game resumes if the pause menu was active
-
-           
         }
 
         // Return to the main menu
