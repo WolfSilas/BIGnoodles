@@ -10,6 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_Script: {fileID: 11500000, guid: 781cc897cf8675041a751163b51f97dd, type: 3}
   m_Name: HDRenderPipelineGlobalSettings
   m_EditorClassIdentifier: 
@@ -20,6 +21,8 @@ MonoBehaviour:
       data1: 140666587840333
       data2: 13763000529963679768
 =======
+=======
+>>>>>>> Stashed changes
   m_Script: {fileID: 0}
   m_Name: HDRenderPipelineGlobalSettings
   m_EditorClassIdentifier: Unity.RenderPipelines.HighDefinition.Runtime:UnityEngine.Rendering.HighDefinition:HDRenderPipelineGlobalSettings
@@ -29,6 +32,9 @@ MonoBehaviour:
     bitDatas:
       data1: 140666587840333
       data2: 13763000512783810584
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     lodBias: 1
     lodBiasMode: 0
@@ -38,7 +44,11 @@ MonoBehaviour:
     maximumLODLevelQualityLevel: 0
     sssQualityMode: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     sssQualityLevel: 1
+=======
+    sssQualityLevel: 0
+>>>>>>> Stashed changes
 =======
     sssQualityLevel: 0
 >>>>>>> Stashed changes
@@ -76,8 +86,13 @@ MonoBehaviour:
     msaaMode: 1
     materialQuality: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_RenderPipelineResources: {fileID: 11400000, guid: 3ce144cff5783da45aa5d4fdc2da14b7, type: 2}
   m_RenderPipelineRayTracingResources: {fileID: 11400000, guid: ba6e7f30e5cffc249a8bf7ee5756c196, type: 2}
+=======
+  m_RenderPipelineResources: {fileID: 0}
+  m_RenderPipelineRayTracingResources: {fileID: 0}
+>>>>>>> Stashed changes
 =======
   m_RenderPipelineResources: {fileID: 0}
   m_RenderPipelineRayTracingResources: {fileID: 0}
@@ -119,7 +134,11 @@ MonoBehaviour:
     serializedBakeSettings: []
     serializedBakingSets: []
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     m_LightingScenario: Default
+=======
+    m_LightingScenario: 
+>>>>>>> Stashed changes
 =======
     m_LightingScenario: 
 >>>>>>> Stashed changes
