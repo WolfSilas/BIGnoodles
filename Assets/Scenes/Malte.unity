@@ -1075,7 +1075,7 @@ Transform:
   m_GameObject: {fileID: 156822501}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.6464193, z: -0, w: 0.76298237}
-  m_LocalPosition: {x: -1384, y: 17.8, z: -1275}
+  m_LocalPosition: {x: -1388.41, y: 14.43, z: -1274.26}
   m_LocalScale: {x: 1.5127, y: 1.5127, z: 1.5127}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10403,6 +10403,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: microwave
       objectReference: {fileID: 0}
+    - target: {fileID: 8283619552161461597, guid: d2fd7ce87e8d887468c2d4a363c33134, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1e2645c01d923c34888774643f402804, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 65702495048144492, guid: d2fd7ce87e8d887468c2d4a363c33134, type: 3}
