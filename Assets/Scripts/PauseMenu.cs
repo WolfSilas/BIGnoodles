@@ -7,7 +7,8 @@ public class PauseMenu : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && !LaptopInteraction.isShopMenuActive)
+        // Check if the Escape key is pressed and the letter image is not active
+        if (Input.GetKeyDown(KeyCode.Escape) && !LaptopInteraction.isShopMenuActive && !LetterPopUp.isLetterImageActive)
         {
             TogglePauseMenu();
         }
