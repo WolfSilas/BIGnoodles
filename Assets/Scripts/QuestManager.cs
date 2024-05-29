@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class QuestManager : MonoBehaviour
 {
-    public QuestDatabase questDatabase;  // Drag the QuestDatabase asset here in the Inspector
+    public QuestDatabase1 questDatabase;  // Drag the QuestDatabase asset here in the Inspector
     private List<Quest> activeQuests = new List<Quest>();
 
     void Start()
     {
         // Initialize quests, possibly load from saved data
-        foreach (var quest in questDatabase.quests)
+        foreach (var quest in questDatabase . quests)
         {
             if (!quest.isCompleted)
             {

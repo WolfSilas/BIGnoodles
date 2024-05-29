@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Quest Database", menuName = "Quests/Quest Database")]
-public class Quest Database : ScriptableObject
+public class QuestDatabase1 : ScriptableObject
 {
     public Quest[] quests;
 }
