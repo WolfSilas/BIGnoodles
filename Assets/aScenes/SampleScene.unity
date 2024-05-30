@@ -6163,6 +6163,24 @@ MonoBehaviour:
   openPositionOffset: {x: 2.1, y: 0, z: -1.17}
   openRotationOffset: {x: 0, y: 0, z: 270}
   openSpeed: 2
+--- !u!4 &588696486 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -5477749408508380018, guid: 22e78f5c1fe782a47ad7f20488b6b5dc, type: 3}
+  m_PrefabInstance: {fileID: 1949779436}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &588696489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588696477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01c9517ed0bf9244e9cbf228d8645d49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cost: 25
 --- !u!1 &600674520
 GameObject:
   m_ObjectHideFlags: 0
@@ -6707,6 +6725,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 742036964}
   m_CullTransparentMesh: 1
+--- !u!114 &744088795 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8038382574802988053, guid: c024b2e173eb3214a9c3c851149f22bb, type: 3}
+  m_PrefabInstance: {fileID: 1215477924}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &745872857
 GameObject:
   m_ObjectHideFlags: 0
@@ -16425,12 +16454,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1596915031}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ae45891ddf041c46a004e9f04cb7dae, type: 3}
+  m_Script: {fileID: 11500000, guid: 2273083d8973f68448b87614a17592d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prompt: 
-  imageComponent: {fileID: 1862159928}
-  spriteToDisplay: {fileID: 21300000, guid: c5a0026620045f14898761011ffa4e14, type: 3}
+  shopCanvas: {fileID: 1818039215}
+  interactionDistance: 15
+  spawnPointPosition: {x: -52, y: 35, z: 120}
 --- !u!43 &1644455346
 Mesh:
   m_ObjectHideFlags: 0
@@ -19622,6 +19651,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1812911252}
   m_CullTransparentMesh: 1
+--- !u!1 &1818039215 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5221834721268388754, guid: 135b515c7c127984599f10f56a06866b, type: 3}
+  m_PrefabInstance: {fileID: 2108158468}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1822361419
 GameObject:
   m_ObjectHideFlags: 0
@@ -23477,6 +23511,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8391222552659086748, guid: 22e78f5c1fe782a47ad7f20488b6b5dc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 588696485}
+    - targetCorrespondingSourceObject: {fileID: -8391222552659086748, guid: 22e78f5c1fe782a47ad7f20488b6b5dc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 588696489}
   m_SourcePrefab: {fileID: 100100000, guid: 22e78f5c1fe782a47ad7f20488b6b5dc, type: 3}
 --- !u!1 &1980275627
 GameObject:
@@ -23900,13 +23937,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4231610970848783172, guid: 135b515c7c127984599f10f56a06866b, type: 3}
+      propertyPath: eepText
+      value: 
+      objectReference: {fileID: 744088795}
+    - target: {fileID: 4231610970848783172, guid: 135b515c7c127984599f10f56a06866b, type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 588696486}
+    - target: {fileID: 4231610970848783172, guid: 135b515c7c127984599f10f56a06866b, type: 3}
+      propertyPath: furniturePrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 588696477}
     - target: {fileID: 5221834721268388754, guid: 135b515c7c127984599f10f56a06866b, type: 3}
       propertyPath: m_Name
       value: ShopManager
       objectReference: {fileID: 0}
     - target: {fileID: 5221834721268388754, guid: 135b515c7c127984599f10f56a06866b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
