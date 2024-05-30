@@ -1,10 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
-<<<<<<< Updated upstream
---- !u!1 &1791107467415504166
-=======
---- !u!1 &6365850202954835500
->>>>>>> Stashed changes
+--- !u!1 &5221834721268388754
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12,13 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< Updated upstream
-  - component: {fileID: 4714674024090844359}
-  - component: {fileID: 7493409219899483863}
-=======
-  - component: {fileID: 6861511261205048011}
-  - component: {fileID: 8818168774403616097}
->>>>>>> Stashed changes
+  - component: {fileID: 2213929997452903054}
+  - component: {fileID: 4231610970848783172}
   m_Layer: 0
   m_Name: ShopManager
   m_TagString: Untagged
@@ -26,21 +17,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< Updated upstream
---- !u!4 &4714674024090844359
-=======
---- !u!4 &6861511261205048011
->>>>>>> Stashed changes
+--- !u!4 &2213929997452903054
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
-  m_GameObject: {fileID: 1791107467415504166}
-=======
-  m_GameObject: {fileID: 6365850202954835500}
->>>>>>> Stashed changes
+  m_GameObject: {fileID: 5221834721268388754}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -49,21 +32,13 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream
---- !u!114 &7493409219899483863
-=======
---- !u!114 &8818168774403616097
->>>>>>> Stashed changes
+--- !u!114 &4231610970848783172
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
-  m_GameObject: {fileID: 1791107467415504166}
-=======
-  m_GameObject: {fileID: 6365850202954835500}
->>>>>>> Stashed changes
+  m_GameObject: {fileID: 5221834721268388754}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 18cff097674e5014392a9f7e42748f41, type: 3}
