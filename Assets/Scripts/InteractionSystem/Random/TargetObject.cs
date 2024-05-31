@@ -5,7 +5,7 @@ public class TargetObject : MonoBehaviour
     public Material originalMaterial;
     public Material changedMaterial;
 
-    private Renderer renderer;
+    private new Renderer renderer;
     private bool isChanged = false;
 
     void Start()

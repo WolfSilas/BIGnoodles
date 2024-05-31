@@ -11,7 +11,7 @@ public class InteractableItem : MonoBehaviour
     private bool isMouseOver = false;
     private bool isPlayerNear = false;
     private Material originalMaterial;
-    private Renderer renderer;
+    private new Renderer renderer;
 
     private Transform playerTransform;
 

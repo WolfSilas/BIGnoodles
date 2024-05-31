@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class DoorOpener : MonoBehaviour
+public class DoorOpener : MonoBehaviour, IInteractable
 {
     public GameObject door; // Reference to the door object to open
     public Vector3 openPositionOffset; // Offset by which the door should move when open
@@ -12,6 +12,8 @@ public class DoorOpener : MonoBehaviour
     private bool isDoorOpen = false; // Flag to track if the door is open
     private Vector3 initialPosition; // Store initial position of the door
     private Quaternion initialRotation; // Store initial rotation of the door
+
+    public string InteractionPrompt => throw new System.NotImplementedException();
 
     void Start()
     {
@@ -74,5 +76,10 @@ public class DoorOpener : MonoBehaviour
         {
             canInteract = false;
         }
+    }
+
+    public bool Interact(Interactor interactor)
+    {
+        throw new System.NotImplementedException();
     }
 }
