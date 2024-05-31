@@ -5,7 +5,7 @@ public class MalteScene : MonoBehaviour
 {
     public void OnClick()
     {
-        SceneManager.LoadScene("Malte");
+        SceneManager.LoadScene("New Prototype");
     }
 }
 

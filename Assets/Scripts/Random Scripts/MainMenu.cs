@@ -5,7 +5,7 @@ public class MainMenu : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("New Prototype");
     }
 
     public void ExitGame()
@@ -14,6 +14,6 @@ public class MainMenu : MonoBehaviour
     }
     public void MalteScene()
     {
-        SceneManager.LoadScene("Malte");
+        SceneManager.LoadScene("New Prototype");
     }
 }

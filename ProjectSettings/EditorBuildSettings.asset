@@ -36,6 +36,6 @@ EditorBuildSettings:
     path: Assets/aScenes/Day1-7/Day1.unity
     guid: d6a35ea38d447524cb72b8362dde6e59
   - enabled: 1
-    path: Assets/Scenes/Malte.unity
-    guid: 9314706756d088a448ed08334ab7e826
+    path: Assets/aScenes/New Prototype/Scenes/New Prototype.unity
+    guid: 5a8a0fd300ab7cb4d892451774698010
   m_configObjects: {}
