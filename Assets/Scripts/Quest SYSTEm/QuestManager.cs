@@ -1,47 +1,38 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class QuestManager : MonoBehaviour
 {
-    public QuestDatabase1 questDatabase;  // Drag the QuestDatabase asset here in the Inspector
-    private List<Quest> activeQuests = new List<Quest>();
+    public List<Quest> quests;
 
-    void Start()
+    public void AddQuest(Quest quest)
     {
-        // Initialize quests, possibly load from saved data
-        foreach (var quest in questDatabase . quests)
+        if (!quests.Contains(quest))
         {
-            if (!quest.isCompleted)
+            quests.Add(quest);
+        }
+    }
+
+    public void CompleteObjective(Quest quest, QuestObjective objective)
+    {
+        if (quests.Contains(quest) && !objective.isCompleted)
+        {
+            objective.isCompleted = true;
+            CheckQuestCompletion(quest);
+        }
+    }
+
+    private void CheckQuestCompletion(Quest quest)
+    {
+        foreach (QuestObjective objective in quest.objectives)
+        {
+            if (!objective.isCompleted)
             {
-                activeQuests.Add(quest);
+                return;
             }
         }
-    }
-
-    public void AcceptQuest(Quest quest)
-    {
-        if (!activeQuests.Contains(quest))
-        {
-            activeQuests.Add(quest);
-            Debug.Log("Quest accepted: " + quest.questName);
-        }
-    }
-
-    public void CompleteQuest(Quest quest)
-    {
-        if (activeQuests.Contains(quest))
-        {
-            quest.isCompleted = true;
-            activeQuests.Remove(quest);
-            // Reward the player
-            Debug.Log("Quest completed: " + quest.questName);
-            // Add experience reward, items, etc.
-        }
-    }
-
-    public List<Quest> GetActiveQuests()
-    {
-        return activeQuests;
+        quest.CompleteQuest();
     }
 }
+
+

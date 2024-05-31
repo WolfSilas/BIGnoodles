@@ -1,42 +1,33 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
 
 public class QuestUI : MonoBehaviour
 {
     public QuestManager questManager;
-    public GameObject questPanelPrefab;
-    public Transform questPanelParent;
+    public Text questListText;
 
-    void Start()
+    void Update()
     {
-        UpdateQuestUI();
+        DisplayQuests();
     }
 
-    public void UpdateQuestUI()
+    void DisplayQuests()
     {
-        foreach (Transform child in questPanelParent)
+        questListText.text = "";
+        foreach (Quest quest in questManager.quests)
         {
-            Destroy(child.gameObject);
+            questListText.text += quest.questName + "\n";
+            questListText.text += quest.description + "\n"; // Added line to display description
+            foreach (QuestObjective objective in quest.objectives)
+            {
+                questListText.text += "- " + objective.description + (objective.isCompleted ? " (Completed)" : "") + "\n";
+            }
         }
-
-        List<Quest> activeQuests = questManager.GetActiveQuests();
-
-        foreach (var quest in activeQuests)
-        {
-            GameObject questPanel = Instantiate(questPanelPrefab, questPanelParent);
-            questPanel.transform.Find("QuestName").GetComponent<Text>().text = quest.questName;
-            questPanel.transform.Find("QuestDescription").GetComponent<Text>().text = quest.description;
-            questPanel.transform.Find("CompleteButton").GetComponent<Button>().onClick.AddListener(() => CompleteQuest(quest));
-        }
-    }
-
-    public void CompleteQuest(Quest quest)
-    {
-        questManager.CompleteQuest(quest);
-        UpdateQuestUI();
     }
 }
+
+
+
+
+
 
