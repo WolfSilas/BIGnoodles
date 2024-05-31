@@ -10,11 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff4807e111364664f89ae062c3b8089b, type: 3}
-  m_Name: NewQuest
+  m_Name: Quest2
   m_EditorClassIdentifier: 
-  questName: 'Quest Name:Laptop                                         '
-  description: Descriptio:Go to the laptop and open it.
+  questName: 
+  description: 
   isCompleted: 0
-  objectives:
-  - description: 
-    isCompleted: 0
+  objectives: []

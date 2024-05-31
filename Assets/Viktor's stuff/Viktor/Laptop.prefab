@@ -80,9 +80,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9859df0f3866979428fa159914e785fd, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4756627888696555111}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9859df0f3866979428fa159914e785fd, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 8505099742911949482}
     - targetCorrespondingSourceObject: {fileID: -6857594835553878514, guid: 9859df0f3866979428fa159914e785fd, type: 3}
       insertIndex: -1
@@ -123,21 +120,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9859df0f3866979428fa159914e785fd, type: 3}
   m_PrefabInstance: {fileID: 5822884482756548451}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4756627888696555111
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6633348461764520498}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2273083d8973f68448b87614a17592d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shopCanvas: {fileID: 0}
-  interactionDistance: 30
-  spawnPointPosition: {x: -52, y: 35, z: 120}
 --- !u!65 &8505099742911949482
 BoxCollider:
   m_ObjectHideFlags: 0

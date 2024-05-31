@@ -7,7 +7,7 @@ public class LaptopInteraction : MonoBehaviour
     private GameObject player;
     private bool isPlayerClose = false;
     private bool isPlacingObject = false; // Track if the player is currently placing an object
-
+    public LaptopIn laptop;
     // Assign the desired spawn point vector
     public Vector3 spawnPointPosition = new Vector3(-52, 35, 120);
 
@@ -47,6 +47,7 @@ public class LaptopInteraction : MonoBehaviour
         // Check if the Escape key is pressed to close the shop canvas
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            laptop.QuestStart();
             if (shopCanvas.activeSelf)
             {
                 ToggleShopCanvas();
