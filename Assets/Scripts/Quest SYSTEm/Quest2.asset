@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff4807e111364664f89ae062c3b8089b, type: 3}
   m_Name: Quest2
   m_EditorClassIdentifier: 
-  questName: 
-  description: 
+  questName: Quest Name:Clothes
+  description: Go to the washing machine
   isCompleted: 0
   objectives: []

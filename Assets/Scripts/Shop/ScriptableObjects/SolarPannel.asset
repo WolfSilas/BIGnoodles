@@ -9,12 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff4807e111364664f89ae062c3b8089b, type: 3}
-  m_Name: Quest
+  m_Script: {fileID: 11500000, guid: 803b7017898af1242b0a4c8c6a08b5b2, type: 3}
+  m_Name: SolarPannel
   m_EditorClassIdentifier: 
-  questName: 'Quest Name:Laptop                                         '
-  description: Description:Go to the laptop and open it.
-  isCompleted: 0
-  objectives:
-  - description: 
-    isCompleted: 0
+  title: Solar Panel
+  description: Getting some energy :)
+  baseCost: 25

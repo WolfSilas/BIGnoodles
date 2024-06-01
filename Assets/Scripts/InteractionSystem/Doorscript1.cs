@@ -2,36 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoorScript : MonoBehaviour, IInteractable
+public class DoorScript1 : MonoBehaviour, IInteractable
 {
     [SerializeField] private string _prompt;
     [SerializeField] private Vector3 openPosition;  // The position when the door is open
     [SerializeField] private Vector3 openRotation;  // The rotation when the door is open
     [SerializeField] private float transitionDuration = 1.0f;  // Duration of the transition
-    public Quest nameQuest;       //
-    public string questname;        //
-    public string questdescription; //
-    public QInteracion QuestInteraction;    //
-    private Vector3 originalPosition;  
-    private Quaternion originalRotation;  
-    private bool isOpen = false;  
-    private bool isTransitioning = false;  
+
+    private Vector3 originalPosition;
+    private Quaternion originalRotation;
+    private bool isOpen = false;
+    private bool isTransitioning = false;
     public string InteractionPrompt => _prompt;
     public int DoorCounter = 0;
     private void Start()
     {
-        questdescription = nameQuest.description;
-        questname = nameQuest.questName;
+      
         originalPosition = transform.position;
         originalRotation = transform.rotation;
     }
-    
-    public bool Interact(Interactor interactor )
+
+    public bool Interact(Interactor interactor)
     {
+
         
-        if ( DoorCounter == 0 )
-        QuestInteraction.Interact(questname,questdescription);
-        DoorCounter++;
         if (!isTransitioning)
         {
             if (isOpen)
@@ -80,5 +74,3 @@ public class DoorScript : MonoBehaviour, IInteractable
 
     }
 }
-
-
