@@ -1,7 +1,9 @@
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+
 
 public class LaptopIn : MonoBehaviour,IInteractable
 {
@@ -11,8 +13,8 @@ public class LaptopIn : MonoBehaviour,IInteractable
     public string questname;        //
     public string questdescription; //
     public static bool isShopMenuActive = false;
-    public GameObject shopCanvas;
-
+    public GameObject Canvas;
+    public LaptopInteraction script;
     public void QuestStart()        //
     {
         Quest.Interact(questname, questdescription);
@@ -22,24 +24,24 @@ public class LaptopIn : MonoBehaviour,IInteractable
 
     public bool Interact(Interactor interactor)
     {
-        isShopMenuActive = true;
-        ToggleShopCanvas();
+        Canvas.gameObject.SetActive(true);
         Quest.gameObject.SetActive(false);
         Debug.Log("Interacting");
         return(true);
     }
     public void Start()
     {
+
         questdescription = nameQuest.description;     //
         questname = nameQuest.questName;              //
     }
     // Start is called before the first frame update
     void ToggleShopCanvas()
     {
-        shopCanvas.SetActive(!shopCanvas.activeSelf);
-        isShopMenuActive = shopCanvas.activeSelf; // Update the static flag
+        Canvas.SetActive(!Canvas.activeSelf);
+        isShopMenuActive = Canvas.activeSelf; // Update the static flag
 
-        if (!shopCanvas.activeSelf )
+        if (!Canvas.activeSelf)
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
@@ -51,3 +53,4 @@ public class LaptopIn : MonoBehaviour,IInteractable
         }
     }
 }
+
