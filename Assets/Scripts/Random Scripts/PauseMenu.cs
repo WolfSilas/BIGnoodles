@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenuCanvas;
-
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape) && !LaptopInteraction.isShopMenuActive)

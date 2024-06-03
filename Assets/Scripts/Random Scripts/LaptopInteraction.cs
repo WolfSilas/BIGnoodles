@@ -31,16 +31,7 @@ public class LaptopInteraction : MonoBehaviour
         shopCanvas.SetActive(!shopCanvas.activeSelf);
         isShopMenuActive = shopCanvas.activeSelf; // Update the static flag
 
-        if (!shopCanvas.activeSelf)
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-        }
-        else
-        {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-        }
+       
     }
 
     

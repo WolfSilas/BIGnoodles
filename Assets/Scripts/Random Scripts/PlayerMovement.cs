@@ -4,7 +4,8 @@ public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 5f; // Adjust this value to change the speed of the character
     private bool isMovementEnabled = true;
-
+    public float lookSpeed = 2f;
+    public float lookXLimit = 45f;
     void Update()
     {
         if (!isMovementEnabled)

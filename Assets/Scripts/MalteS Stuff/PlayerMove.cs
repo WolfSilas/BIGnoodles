@@ -5,7 +5,7 @@ public class PlayerMove : MonoBehaviour
 {
     // Reference to the player's camera
     public Camera playerCamera;
-
+    public LaptopIn e;
     // Movement speeds
     public float walkSpeed = 30f;
     public float runSpeed = 45f;

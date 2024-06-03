@@ -5,7 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 
-public class LaptopIn : MonoBehaviour,IInteractable
+public class LaptopIn : MonoBehaviour, IInteractable
 {
     [SerializeField] private string _prompt;
     public QInteracion Quest;       //
@@ -14,20 +14,23 @@ public class LaptopIn : MonoBehaviour,IInteractable
     public string questdescription; //
     public static bool isShopMenuActive = false;
     public GameObject Canvas;
-    public LaptopInteraction script;
+    public PlayerMove script;
+    public ShopMenu menu;
     public void QuestStart()        //
     {
         Quest.Interact(questname, questdescription);
         Quest.gameObject.SetActive(true);
     }
     public string InteractionPrompt => _prompt;
-
+   
     public bool Interact(Interactor interactor)
     {
         Canvas.gameObject.SetActive(true);
         Quest.gameObject.SetActive(false);
         Debug.Log("Interacting");
-        return(true);
+        script.enabled = false;
+        //script.enabled = false;
+        return (true);
     }
     public void Start()
     {
@@ -36,21 +39,6 @@ public class LaptopIn : MonoBehaviour,IInteractable
         questname = nameQuest.questName;              //
     }
     // Start is called before the first frame update
-    void ToggleShopCanvas()
-    {
-        Canvas.SetActive(!Canvas.activeSelf);
-        isShopMenuActive = Canvas.activeSelf; // Update the static flag
-
-        if (!Canvas.activeSelf)
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-        }
-        else
-        {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-        }
-    }
+   
 }
 
