@@ -1487,7 +1487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2273083d8973f68448b87614a17592d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shopCanvas: {fileID: 708862670}
+  shopCanvas: {fileID: 2033648216}
   interactionDistance: 3
   laptop: {fileID: 259325580}
 --- !u!4 &330149150 stripped
