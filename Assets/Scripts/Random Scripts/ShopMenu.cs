@@ -8,7 +8,7 @@ public class ShopMenu : MonoBehaviour
     public GameObject ShopUI;
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && !LaptopInteraction.isShopMenuActive)
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             ToggleShopMenu();
         }

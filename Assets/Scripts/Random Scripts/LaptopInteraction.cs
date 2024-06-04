@@ -6,7 +6,7 @@ public class LaptopInteraction : MonoBehaviour
     public float interactionDistance = 3f;
     public LaptopIn laptop; //
     public static bool isShopMenuActive = false;
-
+   
     
 
     void Update()

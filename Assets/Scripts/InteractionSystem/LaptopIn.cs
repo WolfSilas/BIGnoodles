@@ -14,7 +14,6 @@ public class LaptopIn : MonoBehaviour, IInteractable
     public string questdescription; //
     public static bool isShopMenuActive = false;
     public GameObject Canvas;
-    public PlayerMove script;
     public ShopMenu menu;
     public void QuestStart()        //
     {
@@ -25,16 +24,17 @@ public class LaptopIn : MonoBehaviour, IInteractable
    
     public bool Interact(Interactor interactor)
     {
+        
         Canvas.gameObject.SetActive(true);
         Quest.gameObject.SetActive(false);
         Debug.Log("Interacting");
-        script.enabled = false;
-        //script.enabled = false;
         return (true);
+   
+
     }
     public void Start()
     {
-
+       
         questdescription = nameQuest.description;     //
         questname = nameQuest.questName;              //
     }
