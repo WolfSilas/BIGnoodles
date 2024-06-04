@@ -14,7 +14,7 @@ public class LaptopIn : MonoBehaviour, IInteractable
     public string questdescription; //
     public static bool isShopMenuActive = false;
     public GameObject Canvas;
-    public ShopMenu menu;
+   
     public void QuestStart()        //
     {
         Quest.Interact(questname, questdescription);
@@ -28,6 +28,17 @@ public class LaptopIn : MonoBehaviour, IInteractable
         Canvas.gameObject.SetActive(true);
         Quest.gameObject.SetActive(false);
         Debug.Log("Interacting");
+        if (!Canvas.activeSelf)
+        {
+            Cursor.lockState = CursorLockMode.Locked;   
+            Cursor.visible = false;
+
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
         return (true);
    
 

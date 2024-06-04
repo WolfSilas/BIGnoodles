@@ -3,10 +3,9 @@ using UnityEngine;
 public class LaptopInteraction : MonoBehaviour
 {
     public GameObject shopCanvas;
-    public float interactionDistance = 3f;
-    public LaptopIn laptop; //
+    public LaptopIn laptop; 
     public static bool isShopMenuActive = false;
-   
+    public PlayerMove cameraMove;
     
 
     void Update()
@@ -14,25 +13,35 @@ public class LaptopInteraction : MonoBehaviour
 
        
 
-        // Check if the Escape key is pressed to close the shop canvas
+        // Check if the Escape key is pressed to close the shop canvas(closing the shop menu)
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             laptop.QuestStart(); 
             if (shopCanvas.activeSelf)
             {
                 ToggleShopCanvas();
-                
+
+              
             }
         }
     }
 
-    void ToggleShopCanvas()
+    void ToggleShopCanvas() 
     {
         shopCanvas.SetActive(!shopCanvas.activeSelf);
-        isShopMenuActive = shopCanvas.activeSelf; // Update the static flag
+        isShopMenuActive = shopCanvas.activeSelf; 
 
-       
+        if (!isShopMenuActive)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+
     }
 
-    
 }

@@ -24,9 +24,12 @@ public class ShopMenu : MonoBehaviour
             // Lock or unlock the cursor based on pause state
             Cursor.lockState = isPaused ? CursorLockMode.None : CursorLockMode.Locked;
             Cursor.visible = isPaused; // Show or hide the cursor based on pause state
+
+
+            
         }
     }
-    
+
     public void ResumeGame()
     {
         // Toggle the visibility of the pause menu canvas
