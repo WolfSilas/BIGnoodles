@@ -38,7 +38,7 @@ public class LaptopInteraction : MonoBehaviour
         }
         else
         {
-            Cursor.lockState = CursorLockMode.None;
+            Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = true;
         }
 
