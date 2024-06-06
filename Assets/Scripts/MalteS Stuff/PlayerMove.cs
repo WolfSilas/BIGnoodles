@@ -36,13 +36,13 @@ public class PlayerMove : MonoBehaviour
 
         // Lock cursor and show it
         Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = true; // Set to true to always show the cursor
+        Cursor.visible = false; // Set to true to always show the cursor
     }
 
     void Update()
     {
         // Make sure cursor is always visible
-        Cursor.visible = true;
+        Cursor.visible = false;
 
         // Get the direction of movement based on player's input
         Vector3 forward = transform.TransformDirection(Vector3.forward);
