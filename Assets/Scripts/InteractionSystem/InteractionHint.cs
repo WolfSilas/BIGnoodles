@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using JetBrains.Annotations;
+using UnityEngine.Playables;
+using UnityEngine.UI;
 
 public class InteractionHint : MonoBehaviour
 {
@@ -27,4 +29,5 @@ public class InteractionHint : MonoBehaviour
         Pickuptext.SetActive(false);
     }
     //The object needs to be destroyed 
+    
 }

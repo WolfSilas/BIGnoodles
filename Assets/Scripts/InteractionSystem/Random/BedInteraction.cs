@@ -5,6 +5,7 @@ using UnityEngine.Playables;
 using UnityEngine.UI;
 
 public class BedInteraction : MonoBehaviour, IInteractable
+
 {
     [SerializeField] private string _prompt;
     public string InteractionPrompt => _prompt;
@@ -28,7 +29,7 @@ public class BedInteraction : MonoBehaviour, IInteractable
    
     public bool Interact(Interactor interactor)
     {
-       
+        
         Debug.Log("Going to Sleep!");
         if (Timeline != null)
         {
