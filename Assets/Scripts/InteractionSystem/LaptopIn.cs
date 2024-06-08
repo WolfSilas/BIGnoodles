@@ -13,7 +13,7 @@ public class LaptopIn : MonoBehaviour, IInteractable
     public string questname;        //
     public string questdescription; //
     public static bool isShopMenuActive = false;
-    public GameObject Canvas;
+    public GameObject Canvas; //ShopUI
    
     public void QuestStart()        //
     {

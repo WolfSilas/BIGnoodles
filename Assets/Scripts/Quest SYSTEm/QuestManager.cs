@@ -1,10 +1,11 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class QuestManager : MonoBehaviour
 {
     public List<Quest> quests;
-
+    
     public void AddQuest(Quest quest)
     {
         if (!quests.Contains(quest))
@@ -19,6 +20,7 @@ public class QuestManager : MonoBehaviour
         {
             objective.isCompleted = true;
             CheckQuestCompletion(quest);
+
         }
     }
 
@@ -32,7 +34,9 @@ public class QuestManager : MonoBehaviour
             }
         }
         quest.CompleteQuest();
+        
     }
+   
 }
 
 

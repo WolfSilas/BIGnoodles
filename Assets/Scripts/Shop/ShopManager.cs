@@ -21,7 +21,7 @@ public class ShopManager : MonoBehaviour
         for (int i = 0; i < shopPanelsGo.Length; i++)           //
         shopPanelsGo[i].SetActive(true);                        //
                 
-        tokenText.text = "Tokens" + tokens.ToString();          //
+        tokenText.text = "Tokens:" + tokens.ToString();          //
 
         LoadPannels();                                          //
         CheckPurchasable();
@@ -31,7 +31,7 @@ public class ShopManager : MonoBehaviour
     {
 
         
-        tokens++;                                               //
+        tokens+= 5;                                               //
         tokenText.text = "Tokens:" + tokens.ToString();          //
         CheckPurchasable() ;
     }
@@ -43,7 +43,7 @@ public class ShopManager : MonoBehaviour
         {
             shopPanels[i].titleTxt.text = shopItemso[i].title;                              //
             shopPanels[i].descriptionTxt.text = shopItemso[i].description;                  //
-            shopPanels[i].costTxt.text = "Tokens" + shopItemso[i].baseCost.ToString();      //
+            shopPanels[i].costTxt.text = "Tokens:" + shopItemso[i].baseCost.ToString();      //
 
         }
     }
