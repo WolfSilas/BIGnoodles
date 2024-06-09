@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff4807e111364664f89ae062c3b8089b, type: 3}
   m_Name: Quest
   m_EditorClassIdentifier: 
-  questName: 'Quest Name:Laptop                                         '
-  description: Description:Go to the laptop and open it.
+  questName: 'Laptop                                         '
+  description: Go to the laptop and open it.
   isCompleted: 0
   objectives:
   - description: 

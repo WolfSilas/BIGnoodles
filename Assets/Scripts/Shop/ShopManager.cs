@@ -17,6 +17,7 @@ public class ShopManager : MonoBehaviour
     public GameObject TumbleBox;
     public GameObject SolarBox;
     public GameObject ShopUi;
+
     void Start()
     {
         for (int i = 0; i < shopPanelsGo.Length; i++)           //
@@ -37,7 +38,7 @@ public class ShopManager : MonoBehaviour
         CheckPurchasable();
     }
 
-
+    
     public void LoadPannels()                                                               //
     {
         for (int i = 0; i < shopItemso.Length; i++)                                         //

@@ -16,6 +16,7 @@ public class LaptopIn : MonoBehaviour, IInteractable
     public GameObject Canvas; //ShopUI
     public ShopManager shopManager;
     public int CompletePrice = 0;
+    
     public void QuestStart()        //
     {
         Quest.Interact(questname, questdescription);
@@ -25,11 +26,15 @@ public class LaptopIn : MonoBehaviour, IInteractable
    
     public bool Interact(Interactor interactor)
     {
+        
         if (CompletePrice == 0)
         {
             shopManager.AddTokens();
         }
         CompletePrice++;
+
+
+
         Canvas.gameObject.SetActive(true);
         Quest.gameObject.SetActive(false);
         Debug.Log("Interacting");
@@ -48,13 +53,12 @@ public class LaptopIn : MonoBehaviour, IInteractable
    
 
     }
-    public void Start()
-    {
+   // public void Start()
+   /// {
        
-        questdescription = nameQuest.description;     //
-        questname = nameQuest.questName;              //
-    }
-    // Start is called before the first frame update
+   //    questdescription = nameQuest.description;     //
+    //    questname = nameQuest.questName;              //
+  //  }
    
 }
 

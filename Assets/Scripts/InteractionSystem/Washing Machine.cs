@@ -12,6 +12,8 @@ public class WashingMachine : MonoBehaviour,IInteractable
     public string questdescription; //
     public QInteracion QuestInteraction;
     public int WashingCounter = 0;
+    public ShopManager shopManager;
+    public int CompletePrice = 0;   
     public string InteractionPrompt => _prompt;
 
     public bool Interact(Interactor interactor)
@@ -20,7 +22,11 @@ public class WashingMachine : MonoBehaviour,IInteractable
         if (WashingCounter == 0)
             QuestInteraction.Interact(questname, questdescription);
         WashingCounter++;
-
+        if (CompletePrice == 0)
+        {
+            shopManager.AddTokens();
+        }
+        CompletePrice++;
         return true;
     }
     private void Start()
