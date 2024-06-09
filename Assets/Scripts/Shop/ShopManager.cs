@@ -6,6 +6,10 @@ using UnityEngine.UI;
 
 public class ShopManager : MonoBehaviour
 {
+    public QInteracion Quest;       //
+    public Quest nameQuest;
+    public string questname;        //
+    public string questdescription;
     public int tokens;                  //
     public TMP_Text tokenText;          //
     public ShopItemSo[] shopItemso;     //
@@ -17,6 +21,11 @@ public class ShopManager : MonoBehaviour
     public GameObject TumbleBox;
     public GameObject SolarBox;
     public GameObject ShopUi;
+    public GameObject TvTemplate;
+    public GameObject WashTemplate;
+    public GameObject TumbleTemplate;
+    public GameObject SolarTemplate;
+    public int QuestCounter = 0;
 
     void Start()
     {
@@ -27,18 +36,20 @@ public class ShopManager : MonoBehaviour
 
         LoadPannels();                                          //
         CheckPurchasable();
+        questdescription = nameQuest.description;
+        questname = nameQuest.questName;
     }
 
     public void AddTokens()                                     //
     {
 
 
-        tokens += 5;                                               //
+        tokens += 10;                                               //
         tokenText.text = "Tokens:" + tokens.ToString();          //
         CheckPurchasable();
     }
 
-    
+
     public void LoadPannels()                                                               //
     {
         for (int i = 0; i < shopItemso.Length; i++)                                         //
@@ -49,8 +60,23 @@ public class ShopManager : MonoBehaviour
 
         }
     }
-
-
+   
+    public void DeleteItemTv()
+    {
+        TvTemplate.SetActive(false);   
+    }
+    public void DeleteItemSolar()
+    {
+        SolarTemplate.SetActive(false);
+    }
+    public void DeleteItemTumble()
+    {
+        TumbleTemplate.SetActive(false);
+    }
+    public void DeleteItemWash()
+    {
+        WashTemplate.SetActive(false);
+    }
     public void CheckPurchasable()
     {
         for (int i = 0; i < shopPanelsGo.Length; i++)
@@ -62,7 +88,13 @@ public class ShopManager : MonoBehaviour
         }
     }
 
-
+    public void PurchaseQuest()
+    {
+        if (QuestCounter == 0)
+            Quest.Interact(questname, questdescription);
+        QuestCounter++;
+        
+    }
     public void Purchaseitems(int btnNo)
     {
         if (tokens >= shopItemso[btnNo].baseCost)
@@ -70,6 +102,7 @@ public class ShopManager : MonoBehaviour
             tokens = tokens - shopItemso[btnNo].baseCost;
             tokenText.text = "Tokens:" + tokens.ToString();
             CheckPurchasable();
+            PurchaseQuest();
         }
     }
     public void CloseShop()

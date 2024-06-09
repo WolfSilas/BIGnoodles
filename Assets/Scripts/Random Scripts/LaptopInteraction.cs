@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class LaptopInteraction : MonoBehaviour
 {
     public GameObject shopCanvas;
-    public LaptopIn laptop; 
+    //public LaptopIn laptop; 
     public string questname;
     public Quest nameQuest;       //
                                   //
@@ -36,7 +36,7 @@ public class LaptopInteraction : MonoBehaviour
         if (LaptopCounter == 0)
             Quest.Interact(questname, questdescription);
         LaptopCounter++;
-        laptop.QuestStart();
+       // laptop.QuestStart();
         if (shopCanvas.activeSelf)
         {
             ToggleShopCanvas();
@@ -49,7 +49,7 @@ public class LaptopInteraction : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Escape))
         {
 
-            laptop.QuestStart();
+          //  laptop.QuestStart();
             if (shopCanvas.activeSelf)
             {
                 ToggleShopCanvas();
