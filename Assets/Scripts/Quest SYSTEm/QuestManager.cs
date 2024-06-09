@@ -20,7 +20,7 @@ public class QuestManager : MonoBehaviour
         {
             objective.isCompleted = true;
             CheckQuestCompletion(quest);
-
+           
         }
     }
 

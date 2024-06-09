@@ -15,15 +15,18 @@ public class DoorScript : MonoBehaviour, IInteractable
     private Vector3 originalPosition;  
     private Quaternion originalRotation;  
     private bool isOpen = false;  
-    private bool isTransitioning = false;  
+    private bool isTransitioning = false;
+    public ShopManager shopManager;
     public string InteractionPrompt => _prompt;
     public int DoorCounter = 0;
+    public int CompletePrice = 0;
     private void Start()
     {
         questdescription = nameQuest.description;
         questname = nameQuest.questName;
         originalPosition = transform.position;
         originalRotation = transform.rotation;
+
     }
     
     public bool Interact(Interactor interactor )
@@ -32,6 +35,11 @@ public class DoorScript : MonoBehaviour, IInteractable
         if ( DoorCounter == 0 )
         QuestInteraction.Interact(questname,questdescription);
         DoorCounter++;
+        if (CompletePrice ==0)
+        {
+            shopManager.AddTokens();
+        }
+        CompletePrice++;
         if (!isTransitioning)
         {
             if (isOpen)

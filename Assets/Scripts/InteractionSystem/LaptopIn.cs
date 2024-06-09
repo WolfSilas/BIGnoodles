@@ -14,7 +14,8 @@ public class LaptopIn : MonoBehaviour, IInteractable
     public string questdescription; //
     public static bool isShopMenuActive = false;
     public GameObject Canvas; //ShopUI
-   
+    public ShopManager shopManager;
+    public int CompletePrice = 0;
     public void QuestStart()        //
     {
         Quest.Interact(questname, questdescription);
@@ -24,7 +25,11 @@ public class LaptopIn : MonoBehaviour, IInteractable
    
     public bool Interact(Interactor interactor)
     {
-        
+        if (CompletePrice == 0)
+        {
+            shopManager.AddTokens();
+        }
+        CompletePrice++;
         Canvas.gameObject.SetActive(true);
         Quest.gameObject.SetActive(false);
         Debug.Log("Interacting");

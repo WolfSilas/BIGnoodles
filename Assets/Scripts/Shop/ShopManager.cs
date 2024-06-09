@@ -11,16 +11,17 @@ public class ShopManager : MonoBehaviour
     public ShopItemSo[] shopItemso;     //
     public GameObject[] shopPanelsGo;   //
     public ShopTemplate[] shopPanels;   //
-    public Button[] myPurchaseBtn; 
+    public Button[] myPurchaseBtn;
     public GameObject TvBox;
     public GameObject WashingBox;
     public GameObject TumbleBox;
     public GameObject SolarBox;
+    public GameObject ShopUi;
     void Start()
     {
         for (int i = 0; i < shopPanelsGo.Length; i++)           //
-        shopPanelsGo[i].SetActive(true);                        //
-                
+            shopPanelsGo[i].SetActive(true);                        //
+
         tokenText.text = "Tokens:" + tokens.ToString();          //
 
         LoadPannels();                                          //
@@ -30,16 +31,16 @@ public class ShopManager : MonoBehaviour
     public void AddTokens()                                     //
     {
 
-        
-        tokens+= 5;                                               //
+
+        tokens += 5;                                               //
         tokenText.text = "Tokens:" + tokens.ToString();          //
-        CheckPurchasable() ;
+        CheckPurchasable();
     }
 
-  
+
     public void LoadPannels()                                                               //
     {
-        for(int i = 0; i < shopItemso.Length; i ++)                                         //
+        for (int i = 0; i < shopItemso.Length; i++)                                         //
         {
             shopPanels[i].titleTxt.text = shopItemso[i].title;                              //
             shopPanels[i].descriptionTxt.text = shopItemso[i].description;                  //
@@ -49,16 +50,16 @@ public class ShopManager : MonoBehaviour
     }
 
 
-    public void CheckPurchasable ()
+    public void CheckPurchasable()
     {
-        for (int i = 0; i < shopPanelsGo.Length ; i++ )
-             {
+        for (int i = 0; i < shopPanelsGo.Length; i++)
+        {
             if (tokens >= shopItemso[i].baseCost)
                 myPurchaseBtn[i].interactable = true;
             else
                 myPurchaseBtn[i].interactable = false;
-            }
-     }
+        }
+    }
 
 
     public void Purchaseitems(int btnNo)
@@ -70,7 +71,13 @@ public class ShopManager : MonoBehaviour
             CheckPurchasable();
         }
     }
-    public void PurchaseTV()
+    public void CloseShop()
+    {
+       ShopUi.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+public void PurchaseTV()
     {
         TvBox.SetActive(true);
     }
@@ -86,6 +93,7 @@ public class ShopManager : MonoBehaviour
     {
         SolarBox.SetActive(true);
     }
+    
 }
 
   
