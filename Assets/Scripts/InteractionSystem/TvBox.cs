@@ -11,11 +11,12 @@ public class TvBox : MonoBehaviour,IInteractable
     public GameObject Tvbox;
     public Timer timer;
     public GameObject priceTimer;
+    public GameObject Questcanvas;
 
     public bool Interact(Interactor interactor)
     {
         priceTimer.SetActive(true);
-
+        Questcanvas.SetActive(false);
         timer.enabled = true;
         Tvbox.SetActive(false);
         TvPlace.SetActive(true);
