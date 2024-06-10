@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class BedInteraction : MonoBehaviour, IInteractable
 
 {
+    public ShopManager ShopManager;
     [SerializeField] private string _prompt;
     public string InteractionPrompt => _prompt;
    
@@ -21,40 +22,46 @@ public class BedInteraction : MonoBehaviour, IInteractable
     private bool isImageVisible = false;
 
     public SceneLoader sceneLoader;
+    public BedInteraction script;
 
     private void Start()
     {
+        script.enabled = false;
         playerController = FindObjectOfType<PlayerController>(); // Find the PlayerController object in the scene
     }
    
     public bool Interact(Interactor interactor)
     {
+       
         
-        Debug.Log("Going to Sleep!");
-        if (Timeline != null)
-        {
-            // Play the timeline
-            Timeline.Play();
 
-            Timeline.stopped += OnTimelineStopped;
-        }
-        // Toggle the visibility of the Image component
-        isImageVisible = !isImageVisible;
-        SetImageVisibility(isImageVisible);
 
-        // Control player movement
-        if (isImageVisible)
-        {
-            playerController.DisableMovement();
-        }
-        else
-        {
-            playerController.EnableMovement();
-        }
+            Debug.Log("Going to Sleep!");
+            if (Timeline != null)
+            {
+                // Play the timeline
+                Timeline.Play();
 
-        return true;
+                Timeline.stopped += OnTimelineStopped;
+            }
+            // Toggle the visibility of the Image component
+            isImageVisible = !isImageVisible;
+            SetImageVisibility(isImageVisible);
+
+            // Control player movement
+            if (isImageVisible)
+            {
+                playerController.DisableMovement();
+            }
+            else
+            {
+                playerController.EnableMovement();
+            }
+
+            return true;
+        
     }
-
+    
     private void OnTimelineStopped(PlayableDirector director)
     {
         // Unsubscribe from the stopped event to avoid memory leaks

@@ -10,7 +10,8 @@ public class ShopManager : MonoBehaviour
     public Quest nameQuest;
     public string questname;        //
     public string questdescription;
-    public int tokens;                  //
+    public int tokens;
+    public Text tokensUI;
     public TMP_Text tokenText;          //
     public ShopItemSo[] shopItemso;     //
     public GameObject[] shopPanelsGo;   //
@@ -26,27 +27,34 @@ public class ShopManager : MonoBehaviour
     public GameObject TumbleTemplate;
     public GameObject SolarTemplate;
     public int QuestCounter = 0;
+    public BedInteraction bedscript;
 
     void Start()
     {
         for (int i = 0; i < shopPanelsGo.Length; i++)           //
             shopPanelsGo[i].SetActive(true);                        //
 
-        tokenText.text = "Tokens:" + tokens.ToString();          //
+        tokenText.text = "Tokens:" + tokens.ToString();
+        tokensUI.text = "Tokens:" + tokens.ToString();//
 
         LoadPannels();                                          //
         CheckPurchasable();
         questdescription = nameQuest.description;
         questname = nameQuest.questName;
     }
+  
 
     public void AddTokens()                                     //
     {
 
 
         tokens += 15;                                               //
-        tokenText.text = "Tokens:" + tokens.ToString();          //
+        tokenText.text = "Tokens:" + tokens.ToString();
+        tokensUI.text = "Tokens:" + tokens.ToString();
+
+        //
         CheckPurchasable();
+        
     }
 
 
@@ -101,8 +109,10 @@ public class ShopManager : MonoBehaviour
         {
             tokens = tokens - shopItemso[btnNo].baseCost;
             tokenText.text = "Tokens:" + tokens.ToString();
+            tokensUI.text = "Tokens:" + tokens.ToString();
             CheckPurchasable();
             PurchaseQuest();
+            
         }
     }
     public void CloseShop()

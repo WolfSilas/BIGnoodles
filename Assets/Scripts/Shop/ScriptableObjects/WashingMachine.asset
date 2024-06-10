@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 803b7017898af1242b0a4c8c6a08b5b2, type: 3}
   m_Name: WashingMachine
   m_EditorClassIdentifier: 
-  title: Washing Machine
-  description: Getting the clothes wet
+  title: Cold Water Detergent
+  description: Wash clothes with cold water!
   baseCost: 25

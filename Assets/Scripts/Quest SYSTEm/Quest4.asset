@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff4807e111364664f89ae062c3b8089b, type: 3}
   m_Name: Quest4
   m_EditorClassIdentifier: 
-  questName: Shop
-  description: Go to the shop and buy new things.
+  questName: QUEST
+  description: Turn off the lamp in the bathroom.
   isCompleted: 0
   objectives: []

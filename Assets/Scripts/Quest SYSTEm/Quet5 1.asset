@@ -10,11 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff4807e111364664f89ae062c3b8089b, type: 3}
-  m_Name: Quest
+  m_Name: Quet5 1
   m_EditorClassIdentifier: 
   questName: QUEST
-  description: Go to the laptop and open it.
+  description: Go to the shop to buy new things.
   isCompleted: 0
-  objectives:
-  - description: 
-    isCompleted: 0
+  objectives: []

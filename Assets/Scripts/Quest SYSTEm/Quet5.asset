@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff4807e111364664f89ae062c3b8089b, type: 3}
   m_Name: Quet5
   m_EditorClassIdentifier: 
-  questName: New things
+  questName: QUEST
   description: Now go to the elevator and get the new things.
   isCompleted: 0
   objectives: []

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Tv
   m_EditorClassIdentifier: 
   title: Tv
-  description: Gonna watch the game tonight
+  description: Gonna watch the game tonight!!!
   baseCost: 25

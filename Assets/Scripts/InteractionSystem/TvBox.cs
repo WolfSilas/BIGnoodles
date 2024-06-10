@@ -12,14 +12,17 @@ public class TvBox : MonoBehaviour,IInteractable
     public Timer timer;
     public GameObject priceTimer;
     public GameObject Questcanvas;
-
+    public ShopManager ShopManager;
+    public BedInteraction bedscript;
     public bool Interact(Interactor interactor)
     {
+        ShopManager.AddTokens();
         priceTimer.SetActive(true);
         Questcanvas.SetActive(false);
         timer.enabled = true;
         Tvbox.SetActive(false);
         TvPlace.SetActive(true);
+        bedscript.enabled = true;
         return true;
     }
      

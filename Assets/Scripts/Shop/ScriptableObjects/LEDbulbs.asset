@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 803b7017898af1242b0a4c8c6a08b5b2, type: 3}
-  m_Name: TumbleDryer
+  m_Name: LEDbulbs
   m_EditorClassIdentifier: 
-  title: Tumble Dryer
-  description: Getting the clothes dry
+  title: LED bulbs
+  description: Saving energy is good.
   baseCost: 25

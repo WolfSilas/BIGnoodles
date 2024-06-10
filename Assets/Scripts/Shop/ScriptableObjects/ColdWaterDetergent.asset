@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 803b7017898af1242b0a4c8c6a08b5b2, type: 3}
-  m_Name: SolarPannel
+  m_Name: ColdWaterDetergent
   m_EditorClassIdentifier: 
-  title: Solar Panel
-  description: Getting some energy :)
+  title: Cold Water Detergent
+  description: Wash clothes with cold water!
   baseCost: 25
