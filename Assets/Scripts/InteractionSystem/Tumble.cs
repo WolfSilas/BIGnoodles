@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TvBox : MonoBehaviour,IInteractable
+public class Tumble : MonoBehaviour, IInteractable
 {
-   
+
     [SerializeField] private string _prompt;
     public string InteractionPrompt => _prompt;
-    public GameObject TvPlace;
-    public GameObject Tvbox;
+    // public GameObject TumblePlace;
+    // public GameObject Tumblebox;
     public Timer timer;
     public GameObject priceTimer;
 
@@ -17,9 +17,9 @@ public class TvBox : MonoBehaviour,IInteractable
         priceTimer.SetActive(true);
 
         timer.enabled = true;
-        Tvbox.SetActive(false);
-        TvPlace.SetActive(true);
+        //    Washbox.SetActive(false);
+        //  WashPlace.SetActive(true);
         return true;
     }
-     
+
 }

@@ -44,7 +44,7 @@ public class ShopManager : MonoBehaviour
     {
 
 
-        tokens += 10;                                               //
+        tokens += 15;                                               //
         tokenText.text = "Tokens:" + tokens.ToString();          //
         CheckPurchasable();
     }

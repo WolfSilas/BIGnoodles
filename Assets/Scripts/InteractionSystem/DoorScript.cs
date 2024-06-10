@@ -37,7 +37,7 @@ public class DoorScript : MonoBehaviour, IInteractable
         DoorCounter++;
         if (CompletePrice ==0)
         {
-            shopManager.AddTokens();
+           // shopManager.AddTokens();
         }
         CompletePrice++;
         if (!isTransitioning)

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 
@@ -13,20 +14,35 @@ public class WashingMachine : MonoBehaviour,IInteractable
     public QInteracion QuestInteraction;
     public int WashingCounter = 0;
     public ShopManager shopManager;
-    public int CompletePrice = 0;   
+    public int CompletePrice = 0;
+
+    public GameObject priceTimer;
+    public Timer timer;
     public string InteractionPrompt => _prompt;
+
+
+
+    
+
+
+
 
     public bool Interact(Interactor interactor)
     {
+       
 
+        timer.enabled = true;
         if (WashingCounter == 0)
             QuestInteraction.Interact(questname, questdescription);
         WashingCounter++;
         if (CompletePrice == 0)
         {
+           
+            priceTimer.SetActive(true);
             shopManager.AddTokens();
         }
         CompletePrice++;
+        
         return true;
     }
     private void Start()
@@ -35,4 +51,6 @@ public class WashingMachine : MonoBehaviour,IInteractable
         questname = nameQuest.questName;
        
     }
+    
+
 }

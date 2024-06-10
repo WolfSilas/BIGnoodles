@@ -14,16 +14,25 @@ public class LampSwitch : MonoBehaviour,IInteractable
     public int LampCounter = 0;
     public ShopManager shopManager;
     public int CompletePrice = 0;
+
+
+
+    public GameObject priceTimer;
+    public Timer timer;
+
+
+
     public string InteractionPrompt => _prompt;
 
     public bool Interact(Interactor interactor)
     {
-
+        timer.enabled = true;
         if (LampCounter == 0)
             QuestInteraction.Interact(questname, questdescription);
         LampCounter++;
         if (CompletePrice == 0)
         {
+            priceTimer.SetActive(true);
             shopManager.AddTokens();
         }
         CompletePrice++;
